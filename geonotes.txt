@@ -1,0 +1,20 @@
+in minerva.gdml:
+  <volume name="DetectorlvOuterDetector0x3efdfc0" >
+   <materialref ref="sAir0x3efdd30" />
+   <solidref ref="od_subtraction0x3ef1b70" />
+   <physvol>
+    <volumeref ref="DetectorlvFrame0x3eff140" />
+    <positionref ref="DetectorlvOuterDetectorFrame0010x3f0cce0inDetectorlvOuterDetector0x3efdfc0p" />
+   </physvol>
+
+  <position name="DetectorlvOuterDetectorFrame0010x3f0cce0inDetectorlvOuterDetector0x3efdfc0p" unit="mm" x="0" y="0" z="4032.7185" />
+
+Put origin halfway between most downstream upstream plane and most upstream downstream plane
+For minerva.gdml: between DetectorlvFrame0x3eff140_20_PV and DetectorlvFrame0x3eff140_20_PV, i.e. between 4511.8895 and 8585.4105
+
+  <position name="DetectorlvOuterDetectorFrame0130x3f0d670inDetectorlvOuterDetector0x3efdfc0p" unit="mm" x="0" y="0" z="8585.4105" />
+  <position name="DetectorlvOuterDetectorFrame0120x3f0d5b0inDetectorlvOuterDetector0x3efdfc0p" unit="mm" x="0" y="0" z="4511.8895" />
+
+y offset seems to be 430 mm (see y="43" in the old minerva geometry)
+
+we want to know if DetectorlvFrame0x3eff140 is a "centered" volume

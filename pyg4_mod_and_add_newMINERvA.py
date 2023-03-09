@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-#
+
+# XXX fix vertical offset (move planes up a bit)
+
 import pyg4ometry
 
 def add_sens_to_file(inFile, outFile):
@@ -28,22 +30,23 @@ def merge_files(inFileArC, inFileMin, outFile):
     ## Want to loop over the logical volumes, and add an auxiliary field to them
     print("Looping over ArC volumes")
     for volname, volume in reg1.logicalVolumeDict.items():
-        aux_tag = pyg4ometry.gdml.Auxiliary("SensDet", volname)
-        volume .addAuxiliaryInfo(aux_tag)
-
-    print("Looping over MINERvA volumes")
-    for volname, volume in reg2.logicalVolumeDict.items():
-        # if "AssemblyVolume" in str(type(volume)): continue
-        # if "Fiber" in volname: continue
         if volname == 'volLArActive':
             aux_tag = pyg4ometry.gdml.Auxiliary("SensDet", volname)
             volume .addAuxiliaryInfo(aux_tag)
+
+    print("Looping over MINERvA volumes")
+    for volname, volume in reg2.logicalVolumeDict.items():
+        if "AssemblyVolume" in str(type(volume)): continue
+        if "Fiber" in volname: continue
+        aux_tag = pyg4ometry.gdml.Auxiliary("SensDet", volname)
+        volume .addAuxiliaryInfo(aux_tag)
 
     print("Merging volumes")
     lv = reg2.logicalVolumeDict["MINERvA_components"]
     
     # create physical volume with placement
-    pv = pyg4ometry.geant4.PhysicalVolume([0,0,0],[0,0,0], lv, "MINERvA", reg1.logicalVolumeDict["volMinosNDHall"], reg1)
+    # see geonotes.txt
+    pv = pyg4ometry.geant4.PhysicalVolume([0,0,0],[0,0,-6548.65], lv, "MINERvA", reg1.logicalVolumeDict["volMinosNDHall"], reg1)
     
     reg1.addVolumeRecursive(pv)
     

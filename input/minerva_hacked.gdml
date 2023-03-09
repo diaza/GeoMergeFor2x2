@@ -13520,7 +13520,7 @@
     <volumeref ref="DetectorlvHcalTowerAir0x3f0f3e0" />
    </physvol>
   </volume>
-  <volume name="DetectorlvOuterDetector0x3efdfc0" >
+  <assembly name="DetectorlvOuterDetector0x3efdfc0" >
    <materialref ref="sAir0x3efdd30" />
    <solidref ref="od_subtraction0x3ef1b70" />
    <physvol>
@@ -13699,7 +13699,7 @@
     <volumeref ref="DetectorlvFrame0x3eff140" />
     <positionref ref="DetectorlvOuterDetectorFrame0010x3f0cce0inDetectorlvOuterDetector0x3efdfc0p" />
    </physvol>
-  </volume>
+  </assembly>
   <volume name="DetectorlvPerimeterShield0x3f17b60" >
    <materialref ref="sMinervaPureLead0x3f173b0" />
    <solidref ref="shield_subtraction0x3f16490" />
@@ -16514,7 +16514,7 @@
     <positionref ref="DetectorlvTrackerEcalModuleXVTrackerEcalXVPlaneV0x4064d40inDetectorlvTrackerEcalModuleXV0x4064cb0p" />
    </physvol>
   </volume>
-  <volume name="DetectorlvTracker0x3f13130" >
+  <assembly name="DetectorlvTracker0x3f13130" >
    <materialref ref="sAir0x3efdd30" />
    <solidref ref="tracker_intersection0x3f12f70" />
    <physvol>
@@ -16605,7 +16605,7 @@
     <volumeref ref="DetectorlvTrackerModuleXU0x3f13520" />
     <positionref ref="DetectorlvTrackerModule0010x4062580inDetectorlvTracker0x3f13130p" />
    </physvol>
-  </volume>
+  </assembly>
   <volume name="DetectorlvEcalPlaneU0x40679f0" >
    <materialref ref="sAir0x3efdd30" />
    <solidref ref="ecu_intersection0x4067830" />
@@ -16654,7 +16654,7 @@
     <positionref ref="DetectorlvEcalModuleXVEcalXVPlaneX0x4067d70inDetectorlvEcalModuleXV0x40680d0p" />
    </physvol>
   </volume>
-  <volume name="DetectorlvDownEcal0x4067120" >
+  <assembly name="DetectorlvDownEcal0x4067120" >
    <materialref ref="sAir0x3efdd30" />
    <solidref ref="downEcal_intersection0x4066f60" />
    <physvol>
@@ -16697,7 +16697,7 @@
     <volumeref ref="DetectorlvEcalModuleXU0x40674f0" />
     <positionref ref="DetectorlvDownEcalModule0230x4067c00inDetectorlvDownEcal0x4067120p" />
    </physvol>
-  </volume>
+  </assembly>
   <volume name="DetectorlvHcalShield0x3fc03a0" >
    <materialref ref="sMinervaStainlessSteel0x3f02ac0" />
    <solidref ref="hcshield_intersection0x3fbf110" />
@@ -16738,7 +16738,7 @@
     <positionref ref="DetectorlvHcalModuleVHcalPlateV0x3fc0c80inDetectorlvHcalModuleV0x3fc0fe0p" />
    </physvol>
   </volume>
-  <volume name="DetectorlvDownHcal0x3fbe6b0" >
+  <assembly name="DetectorlvDownHcal0x3fbe6b0" >
    <materialref ref="sAir0x3efdd30" />
    <solidref ref="downHcal_intersection0x3fbe4f0" />
    <physvol>
@@ -16789,7 +16789,7 @@
     <volumeref ref="DetectorlvHcalModuleX0x3fbebc0" />
     <positionref ref="DetectorlvDownHcalModule0330x3fc04f0inDetectorlvDownHcal0x3fbe6b0p" />
    </physvol>
-  </volume>
+  </assembly>
   <assembly name="MINERvA_components" >
    <materialref ref="sAir0x3efdd30" />
    <solidref ref="WorldBox0x3f12b10" />
