@@ -53,7 +53,7 @@ def merge_files(inFileArC, inFileMin, outFile):
 
 if __name__ == "__main__":
 
-    inFileArC = "arc2x2.gdml"
-    inFileMin = "MINERvA_only_15trackerplanes.gdml"
-    outFile   = "Merged2x2MINERvA.gdml"    
+    inFileArC = "input/arc2x2.gdml"
+    inFileMin = "input/MINERvA_only_15trackerplanes.gdml"
+    outFile   = "output/Merged2x2MINERvA.gdml"
     merge_files(inFileArC, inFileMin, outFile)
