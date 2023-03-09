@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+#
 import pyg4ometry
 
 def add_sens_to_file(inFile, outFile):
