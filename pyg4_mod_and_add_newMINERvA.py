@@ -46,7 +46,7 @@ def merge_files(inFileArC, inFileMin, outFile):
     
     # create physical volume with placement
     # see geonotes.txt
-    pv = pyg4ometry.geant4.PhysicalVolume([0,0,0],[0,0,-6548.65], lv, "MINERvA", reg1.logicalVolumeDict["volMinosNDHall"], reg1)
+    pv = pyg4ometry.geant4.PhysicalVolume([0,0,0],[0,430,-6548.65], lv, "MINERvA", reg1.logicalVolumeDict["volMinosNDHall"], reg1)
     
     reg1.addVolumeRecursive(pv)
     
