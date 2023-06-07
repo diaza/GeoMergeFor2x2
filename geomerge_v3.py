@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# XXX fix vertical offset (move planes up a bit)
+from math import pi
 
 import pyg4ometry
 
@@ -50,9 +50,11 @@ def merge_files(inFileHall, inFileArC, inFileMin, outFile):
     
     zoffset = 4000
 
-    pvArC = pyg4ometry.geant4.PhysicalVolume([0,0,0],[0,0,zoffset],
+    pvArC = pyg4ometry.geant4.PhysicalVolume([pi/2, pi, 0],
+                                             [0, 0, zoffset],
                                              lvArC, "TheArgonCube", lvHall, reg0)
-    pvMin = pyg4ometry.geant4.PhysicalVolume([0,0,0],[0, 420, -6548.65 + zoffset],
+    pvMin = pyg4ometry.geant4.PhysicalVolume([0, pi, 0],
+                                             [0, 420, -6548.65 + zoffset],
                                              lvMin, "MINERvA", lvHall, reg0)
     
     reg0.addVolumeRecursive(pvArC)
