@@ -48,13 +48,14 @@ def merge_files(inFileHall, inFileArC, inFileMin, outFile):
     lvArC = reg1.logicalVolumeDict["volArgonCubeDetector"]
     lvMin = reg2.logicalVolumeDict["MINERvA_components"]
     
-    zoffset = 4000
+    yoffset = -3100
+    zoffset = -13000
 
-    pvArC = pyg4ometry.geant4.PhysicalVolume([pi/2, pi, 0],
-                                             [0, 0, zoffset],
+    pvArC = pyg4ometry.geant4.PhysicalVolume([-pi/2, pi, 0],
+                                             [0, yoffset, zoffset],
                                              lvArC, "TheArgonCube", lvHall, reg0)
     pvMin = pyg4ometry.geant4.PhysicalVolume([0, pi, 0],
-                                             [0, 420, -6548.65 + zoffset],
+                                             [0, yoffset + 420, 6548.65 + zoffset],
                                              lvMin, "MINERvA", lvHall, reg0)
     
     reg0.addVolumeRecursive(pvArC)
@@ -67,8 +68,7 @@ def merge_files(inFileHall, inFileArC, inFileMin, outFile):
 
 if __name__ == "__main__":
 
-    # XXX fix rock composition!
-    inFileHall = "input/New_2x2_Hall.gdml"
+    inFileHall = "input/New_2x2_Hall_newRock.gdml"
     inFileArC = "input/arc2x2.gdml"
     inFileMin = "input/minerva_hacked.gdml"
     outFile   = "output/Merged2x2MINERvA_v3.gdml"
