@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+  <define>
+    <position unit="cm" name="cut2pos" x="-896.62" y="0.0" z="-144.78"/>
+    <position unit="cm" name="finalhall" x="-499.11" y="0.0" z="2462.53"/>
+    <position unit="cm" name="Entrance1Pos" x="403.86" y="-198.12" z="2291.08"/>
+    <position unit="cm" name="Entrance2Pos" x="-210.82" y="-165.1" z="3771.9"/>
+    <position unit="cm" name="Entrance3Pos" x="448.31" y="0.0" z="1129.03"/>
+    <position unit="cm" name="Entrance1.5Pos" x="556.26" y="466.09000000000003" z="0.0"/>
+    <position unit="cm" name="PitPos" x="0.0" y="0.0" z="1546.99"/>
+    <position unit="cm" name="PitPos2" x="0.0" y="118.11" z="2317.75"/>
+    <rotation unit="degree" name="Rotation000837" x="0" y="11.2" z="0"/>
+    <rotation unit="degree" name="Rotation000838" x="-90" y="0" z="0"/>
+    <rotation unit="degree" name="Rotation000839" x="0" y="0" z="0"/>
+    <rotation unit="degree" name="Rotation000840" x="90" y="0" z="180"/>
+    <rotation unit="degree" name="Rotation000841" x="0" y="-11.2" z="0"/>
+    <position unit="cm" name="HallPosition" x="0.0" y="0.0" z="4958.92"/>
+    <rotation unit="degree" name="Rotation000846" x="0" y="180" z="0"/>
+    <position unit="cm" name="volhall_2x2_air_volume_pos" x="0.0" y="0.0" z="-4958.92"/>
+    <rotation unit="degree" name="volhall_2x2_air_volume_rot" x="0" y="0" z="0"/>
+    <position name="center"/>
+    <rotation name="identity"/>
+  </define>
+  <materials>
+    <element name="hydrogen" Z="1" formula="H">
+      <atom value="1.00791"/>
+    </element>
+    <isotope name="boron11" Z="5" N="11">
+      <atom type="A" value="11.0"/>
+    </isotope>
+    <element name="boron">
+      <fraction ref="boron11" n="1.0"/>
+    </element>
+    <element name="carbon" Z="6" formula="C">
+      <atom value="12.0107"/>
+    </element>
+    <element name="nitrogen" Z="7" formula="N">
+      <atom value="14.0671"/>
+    </element>
+    <element name="oxygen" Z="8" formula="O">
+      <atom value="15.999"/>
+    </element>
+    <element name="fluorine" Z="9" formula="F">
+      <atom value="18.9984"/>
+    </element>
+    <element name="sodium" Z="11" formula="Na">
+      <atom value="22.99"/>
+    </element>
+    <element name="magnesium" Z="12" formula="Mg">
+      <atom value="24.305"/>
+    </element>
+    <element name="aluminum" Z="13" formula="Al">
+      <atom value="26.9815"/>
+    </element>
+    <element name="silicon" Z="14" formula="Si">
+      <atom value="28.0855"/>
+    </element>
+    <element name="phosphorus" Z="15" formula="P">
+      <atom value="30.973"/>
+    </element>
+    <element name="sulfur" Z="16" formula="S">
+      <atom value="32.065"/>
+    </element>
+    <element name="argon" Z="18" formula="Ar">
+      <atom value="39.948"/>
+    </element>
+    <element name="potassium" Z="19" formula="K">
+      <atom value="39.0983"/>
+    </element>
+    <element name="calcium" Z="20" formula="Ca">
+      <atom value="40.078"/>
+    </element>
+    <element name="titanium" Z="22" formula="Ti">
+      <atom value="47.867"/>
+    </element>
+    <element name="chromium" Z="24" formula="Cr">
+      <atom value="51.9961"/>
+    </element>
+    <element name="manganese" Z="25" formula="Mn">
+      <atom value="54.938"/>
+    </element>
+    <element name="iron" Z="26" formula="Fe">
+      <atom value="55.845"/>
+    </element>
+    <element name="nickel" Z="28" formula="Ni">
+      <atom value="58.6934"/>
+    </element>
+    <element name="tungsten" Z="74" formula="W">
+      <atom value="183.84"/>
+    </element>
+    <element name="gold" Z="79" formula="Au">
+      <atom value="196.966"/>
+    </element>
+    <isotope name="copper63" Z="29" N="63">
+      <atom type="A" value="62.93"/>
+    </isotope>
+    <isotope name="copper65" Z="29" N="65">
+      <atom type="A" value="64.93"/>
+    </isotope>
+    <element name="copper">
+      <fraction ref="copper63" n="0.6917"/>
+      <fraction ref="copper65" n="0.3083"/>
+    </element>
+    <element name="zinc" Z="30" formula="Zn">
+      <atom value="63.93"/>
+    </element>
+    <element name="bromine" Z="35" formula="Br">
+      <atom value="79.904"/>
+    </element>
+    <element name="xenon" Z="54" formula="Xe">
+      <atom value="131.293"/>
+    </element>
+    <element name="lead" Z="82" formula="Pb">
+      <atom value="207.2"/>
+    </element>
+    <material name="NoGas" formula="">
+      <D value="1e-25"/>
+      <fraction ref="argon" n="1.0"/>
+    </material>
+    <material name="Air" formula="">
+      <D value="0.001225"/>
+      <fraction ref="nitrogen" n="0.781154"/>
+      <fraction ref="oxygen" n="0.209476"/>
+      <fraction ref="argon" n="0.00934"/>
+    </material>
+    <material name="Rock" formula="">
+      <D value="2.33" unit="g/cm3"/>
+      <fraction n="0.0147547" ref="hydrogen"/>
+      <fraction n="0.0114328" ref="carbon"  />
+      <fraction n="0.5637993" ref="oxygen"  />
+      <fraction n="0.0431255" ref="calcium" />
+      <fraction n="0.0028548" ref="sodium"  />
+      <fraction n="0.0946920" ref="aluminum"/>
+      <fraction n="0.0179492" ref="iron"    />
+      <fraction n="0.2420140" ref="silicon" />
+      <fraction n="0.0093778" ref="potassium"/>
+    </material>
+  </materials>
+  <solids>
+    <box name="hall_2x2_air_volume" lunit="cm" x="7112.52" y="6932.179999999999" z="16500.0"/>
+    <box name="HallVol" lunit="cm" x="1112.52" y="932.1800000000001" z="4582.16"/>
+    <arb8 name="ExtraWallvol" lunit="cm" aunit="radian" v1x="0.0" v1y="-683.26" v2x="-152.39999999999998" v2y="-469.90000000000003" v3x="-152.39999999999998" v3y="0.0" v4x="0.0" v4y="0.0" v5x="0.0" v5y="-683.26" v6x="-152.39999999999998" v6y="-469.90000000000003" v7x="-152.39999999999998" v7y="0.0" v8x="0.0" v8y="0.0" dz="2291.08"/>
+    <arb8 name="Entrance1Vol" lunit="cm" aunit="radian" v1x="0.0" v1y="624.84" v2x="878.84" v2y="449.58" v3x="0.0" v3y="-3990.34" v4x="0.0" v4y="-3990.34" v5x="0.0" v5y="624.84" v6x="878.84" v6y="449.58" v7x="0.0" v7y="-3990.34" v8x="0.0" v8y="-3990.34" dz="267.97"/>
+    <box name="Entrance2Vol" lunit="cm" x="896.62" y="601.98" z="1968.5"/>
+    <box name="Entrance3Vol" lunit="cm" x="1793.24" y="601.98" z="289.56"/>
+    <box name="cut2Vol" lunit="cm" x="1759.0880227783844" y="601.98" z="871.5488079817029"/>
+    <box name="finalhall" lunit="cm" x="789.5775012607448" y="601.98" z="4635.5"/>
+    <tube name="BottomlessPit" lunit="cm" aunit="radian" rmin="0.0" rmax="335.28" z="3932.1799999999994" startphi="0.0" deltaphi="6.283185307179586"/>
+    <tube name="BottomlessPitBottom" lunit="cm" aunit="radian" rmin="0.0" rmax="508.0" z="838.2" startphi="0.0" deltaphi="6.283185307179586"/>
+    <union name="Pit">
+      <first ref="BottomlessPitBottom"/>
+      <second ref="BottomlessPit"/>
+      <positionref ref="PitPos"/>
+      <rotationref ref="identity"/>
+    </union>
+    <intersection name="HallAirVolTemp3.5">
+      <first ref="Entrance3Vol"/>
+      <second ref="cut2Vol"/>
+      <positionref ref="cut2pos"/>
+      <rotationref ref="Rotation000837"/>
+    </intersection>
+    <union name="Pitunion">
+      <first ref="finalhall"/>
+      <second ref="Pit"/>
+      <positionref ref="PitPos2"/>
+      <rotationref ref="Rotation000838"/>
+    </union>
+    <union name="Pitunion2">
+      <first ref="HallAirVolTemp3.5"/>
+      <second ref="Pitunion"/>
+      <positionref ref="finalhall"/>
+      <rotationref ref="Rotation000839"/>
+    </union>
+    <union name="HallAirVolTemp4">
+      <first ref="Entrance2Vol"/>
+      <second ref="Pitunion2"/>
+      <positionref ref="Entrance3Pos"/>
+      <rotationref ref="identity"/>
+    </union>
+    <subtraction name="HallAirVolTemp.5">
+      <first ref="HallVol"/>
+      <second ref="ExtraWallvol"/>
+      <positionref ref="Entrance1.5Pos"/>
+      <rotationref ref="identity"/>
+    </subtraction>
+    <union name="HallAirVolTemp1">
+      <first ref="HallAirVolTemp.5"/>
+      <second ref="Entrance1Vol"/>
+      <positionref ref="Entrance1Pos"/>
+      <rotationref ref="Rotation000840"/>
+    </union>
+    <union name="HallAirVolTemp2">
+      <first ref="HallAirVolTemp1"/>
+      <second ref="HallAirVolTemp4"/>
+      <positionref ref="Entrance2Pos"/>
+      <rotationref ref="Rotation000841"/>
+    </union>
+    <box name="World" lunit="cm" x="7112.52" y="6932.179999999999" z="30000.0"/>
+  </solids>
+  <structure>
+    <volume name="volMinosNDHall">
+      <materialref ref="Air"/>
+      <solidref ref="HallAirVolTemp2"/>
+    </volume>
+    <volume name="volhall_2x2_air_volume">
+      <materialref ref="Rock"/>
+      <solidref ref="hall_2x2_air_volume"/>
+      <physvol>
+        <volumeref ref="volMinosNDHall"/>
+        <positionref ref="HallPosition"/>
+        <rotationref ref="Rotation000846"/>
+      </physvol>
+    </volume>
+    <volume name="volWorld">
+      <materialref ref="NoGas"/>
+      <solidref ref="World"/>
+      <physvol>
+        <volumeref ref="volhall_2x2_air_volume"/>
+        <positionref ref="volhall_2x2_air_volume_pos"/>
+        <rotationref ref="volhall_2x2_air_volume_rot"/>
+      </physvol>
+    </volume>
+  </structure>
+  <setup name="Default" version="0">
+    <world ref="volWorld"/>
+  </setup>
+</gdml>

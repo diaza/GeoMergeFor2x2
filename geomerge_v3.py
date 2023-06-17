@@ -68,7 +68,7 @@ def merge_files(inFileHall, inFileArC, inFileMin, outFile):
 
 if __name__ == "__main__":
 
-    inFileHall = "input/New_2x2_Hall_newRock.gdml"
+    inFileHall = "input/New_2x2_Hall_newRock_clean.gdml"
     inFileArC = "input/arc2x2.gdml"
     inFileMin = "input/minerva_hacked.gdml"
     outFile   = "output/Merged2x2MINERvA_v3.gdml"
